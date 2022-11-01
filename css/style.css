@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/*VARIABLES */
+
+:root {
+    /* palette*/
+    --primary:#0C71C3;
+    --secondary:#000003;
+    --light:#FDFDFD;
+    --accent:#449EE8;
+
+    /* Font Sizes*/
+    --text-xxl: 4.8em;
+    --text-xl: 3.6em;
+    --text-lg: 3.2em;
+    --text-md: 2.2em;
+    --text-sm: 1.6em;
+    --text-xs: 1.2em;
+
+    
+    /* Spacings*/
+
+    --sp-xxl:12rem;
+    --sp-xl:8rem;
+    --sp-lg:5rem;
+    --sp-md:3.2rem;
+    --sp-sm:1.6rem;
+    --sp-xs:0.8rem;
+
+
+}
+
+
+
+/* NORMALIZE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 62.5%;
+    height: 100%;
+    
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://fondosmil.com/fondo/27471.jpg);
+    font-size: var(--secondary);
+    position: relative;
+    min-height: 100vh;
+    
+}
+
+
+.grid-conteiner  > * {
+    box-shadow: -1px 1px 7px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.grid-conteiner{
+    display: grid;
+    gap: 10px;
+    grid-template: 
+     "header "    
+     "navbar"     
+     "main"       
+     "sidebar"   
+     "footer"     ;
+
+}
+
+
+.header{
+    grid-area: header;
+    background-color: #0C71C3;
+    width: 100%;
+    align-items: center; 
+      
+       
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: #FDFDFD;
+}
+
+.sideabar{
+    grid-area: sidebar;
+    background-color: #FDFDFD;
+    
+}
+
+.main{
+    grid-area: main;
+    background-color: #FDFDFD;
+}
+
+.footer {
+    grid-area: footer;
+    background-color:#449EE8;
+    position:relative;
+    
+
+}
+.productos-img{
+    margin: auto;
+    width: 100%;
+    min-width:300px;
+    max-width: 600px;
+    height: auto;
+}
+.image-container{
+    margin: auto;
+    width: 100%;
+    min-width:300px;
+    max-width: 600px;
+    height: auto;
+}
+
+img{
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+} 
+.aside_box {
+    display:flex;
+    flex-direction:column;
+    
+}
+.form_box{
+    display: grid;
+    justify-content: space-around;
+    padding: 0 40px;
+}
+
+.header_navbar .menu .menu__link {
+    color: var(--light);
+    text-decoration: none;
+    padding: 1rem;
+    transition: background .3s ;
+
+}
+
+
+
+@media (min-width:975px) {
+    .grid-conteiner { 
+        grid-template: 
+        "header header  header" 150px
+        "navbar navbar  navbar" 100px
+        "main   main  sidebar"  auto
+        "footer footer  footer" 100px/
+        300px   auto    300px ;
+         }
+
+                
+         .Inventario{
+            display:grid;
+            justify-content:center;
+            flex-direction: column;
+            padding: 5rem;
+        }          
+        
+
+
+.header_navbar{
+    display: flex; 
+    justify-content:space-between;
+    
+}
+
+
+ .header_navbar .menu .menu__link {
+    color: var(--light);
+    text-decoration: none;
+    padding: 1rem;
+    transition: background .3s ;
+
+}
+
+.header_navbar .menu .menu__link:hover { 
+    background-color:#000003 ;
+}
+
+
+
+.header_navbar .menu {
+    display: flex;
+    margin: 10px 0;
+    gap: 1rem;
+}
+
+.header_navbar .menu .menu__item {
+    display: flex;
+    margin: 12px;
+}
+
+
+
+
+ul{
+ list-style-type: none;
+ 
+    
+}
+
+h2{
+    color: var(--accent);
+    font-size:2.2em;
+}
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin:auto;
+    padding: 10;
+}
+
+.conteiner-body{
+    display: flex;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 60px;
+}
+
+
+
+
+
+
+
+.escribiendo{
+    display: inline-block;
+}
+
+h5{
+  font-size: 2.6em;
+  border-right: 2.5px solid rgb(255, 255, 255);
+  animation: cursor .10s , escribiendo 2.50s steps(16,end);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+
+
+ @keyframes cursor{
+            0% {border-color: transparent}
+            50% {border-color: green}
+        }
+        
+ @keyframes escribiendo {
+            from{width: 0}
+            to{width: 100%}
+        }
+ }
